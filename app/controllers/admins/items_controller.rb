@@ -1,5 +1,5 @@
-class Admins::ItemsController < ApplicationController
-    
+ class Admins::ItemsController < ApplicationController
+  
   def index
    @items = Item.all
   end
@@ -21,4 +21,10 @@ class Admins::ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
   end
-end
+  
+  private
+  
+  def item_params
+   
+  
+ end

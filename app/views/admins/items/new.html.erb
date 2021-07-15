@@ -1,6 +1,6 @@
 <h1>商品新規登録</h1>
 
-<%= form_with model: @item, url:'/items', local:true do |f| %>
+<%= form_with model: @item, url:'/admins/items', local:true do |f| %>
 <h5>商品画像</h5>
  <%= f.attachment_field :image  %>
  <h5>商品名</h5>
@@ -8,7 +8,7 @@
  <h5>商品説明</h5>
    <%= f.text_area :introduction, class:"form-control" %>
  <h5>ジャンル</h5>
-  %= f.collection_select :genre_id, Genre.all, :id, :genre_name %>
+  <%= f.collection_select :genres, Genre.all, :id, :name %>
  <h5>税抜価格</h5>
  <%= f.text_field :price, class:"form-control" %>
  　
