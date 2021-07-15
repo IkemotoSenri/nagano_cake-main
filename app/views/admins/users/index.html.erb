@@ -1,0 +1,23 @@
+<h4>注文履歴詳細</h4>
+会員情報一覧
+<table>
+  <thead>
+   <tr>
+    <th>会員ID</th>
+    <th>氏名</th>
+    <th>メールアドレス</th>
+    <th>ステータス</th>
+   </tr>
+  </thead>
+  
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%=link_to user.id, admins_user_path(user.id) %> </td>
+      <td><%= user.first_name %><%= user.last_name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.is_active %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
