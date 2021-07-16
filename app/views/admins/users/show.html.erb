@@ -10,4 +10,5 @@
  メールアドレス<%= @user.email %>
  会員ステータス
  
- <%= link_to "編集する", edit_admins_user_path(user.id) %>
+ <%= link_to "編集する", edit_admins_user_path(@user) %>
+ <%= link_to "注文一覧を見る", admins_top_path %>
