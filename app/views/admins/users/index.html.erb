@@ -13,8 +13,8 @@
   <tbody>
     <% @users.each do |user| %>
     <tr>
-      <td><%=link_to user.id, admins_user_path(user.id) %> </td>
-      <td><%= user.first_name %><%= user.last_name %></td>
+      <td><%= user.id %> </td>
+      <td><%=link_to user.first_name,  admins_user_path(user.id) %><%= link_to user.last_name, admins_user_path(user.id) %></td>
       <td><%= user.email %></td>
       <td><%= user.is_active %></td>
     </tr>
