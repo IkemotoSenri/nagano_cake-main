@@ -2,6 +2,7 @@
   
   def index
    @items = Item.all
+   @genre = Genre.all
   end
 
   def new
@@ -11,7 +12,7 @@
   def create
    @item = Item.new(item_params)
    @item.save
-   redirect_to admins_top
+   redirect_to admins_top_path
   end
   
   def show
@@ -25,6 +26,7 @@
   private
   
   def item_params
-   
+   params.require(:item).permit(:name,:introduction,:image,:price,:is_active, :genre_id)
+  end
   
  end

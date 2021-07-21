@@ -1,0 +1,7 @@
+商品一覧
+
+ <% @items.each do |item| %>
+ <%=link_to item.name, public_item_path(item.id) %>
+ ¥<%= item.price %>
+ 
+ <% end %>

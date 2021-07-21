@@ -11,6 +11,13 @@
   <%= f.collection_select :genres, Genre.all, :id, :name %>
  <h5>税抜価格</h5>
  <%= f.text_field :price, class:"form-control" %>
+ 
+  
+ <h5>販売ステータス</h5>
+  <%= f.radio_button :is_active, :true %>
+  <%= f.label :is_active, "販売中", {value: :true, style: "display: inline-block;"} %>
+  <%= f.radio_button :is_active, :faulse %>
+  <%= f.label :is_active, "販売停止中", {value: :faulse, style: "display: inline-block;"} %>
  　
   <%= f.submit "この内容で登録する", class:"btn btn-primary btn-block btn-base-1 mt-20" %>
   
